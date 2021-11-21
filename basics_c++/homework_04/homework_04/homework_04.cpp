@@ -51,7 +51,7 @@ int main()
 
 	cout << "\n\tExercise 4:\n\n" << endl;
 
-	int prime = 0;
+	int prime = 0, flag = 0;
 
 	cout << "Enter number: ";
 	cin >> prime;
@@ -60,13 +60,16 @@ int main()
 		cout << "number is prime" << endl;
 	}
 	else {
-		for (int i = 2; i <= prime; i++) {
+		flag = 0;
+		for (int i = 2; i < prime; i++) {
 			if (prime%i == 0) {
 				cout << "number is not prime" << endl;
+				flag = 1;
 				break;
 			}
+		}
+		if (flag == 0) {
 			cout << "number is prime" << endl;
-
 		}
 	}
 ////////////////////////////////////////////// Exercise 5:
